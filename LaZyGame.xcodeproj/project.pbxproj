@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBF4437615A99F99006F9EE5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF4437515A99F99006F9EE5 /* Cocoa.framework */; };
+		CBF4438015A99F99006F9EE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBF4437E15A99F99006F9EE5 /* InfoPlist.strings */; };
+		CBF4438215A99F99006F9EE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4438115A99F99006F9EE5 /* main.m */; };
+		CBF4438615A99F99006F9EE5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CBF4438415A99F99006F9EE5 /* Credits.rtf */; };
+		CBF4438915A99F9A006F9EE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4438815A99F9A006F9EE5 /* AppDelegate.m */; };
+		CBF4438C15A99F9A006F9EE5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4438A15A99F9A006F9EE5 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CBF4437115A99F99006F9EE5 /* LaZyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaZyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF4437515A99F99006F9EE5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CBF4437815A99F99006F9EE5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CBF4437915A99F99006F9EE5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CBF4437A15A99F99006F9EE5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CBF4437D15A99F99006F9EE5 /* LaZyGame-Info.plist */ = {isa = PBXFileReference; path = "LaZyGame-Info.plist"; sourceTree = "<group>"; };
+		CBF4437F15A99F99006F9EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CBF4438115A99F99006F9EE5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CBF4438315A99F99006F9EE5 /* LaZyGame-Prefix.pch */ = {isa = PBXFileReference; path = "LaZyGame-Prefix.pch"; sourceTree = "<group>"; };
+		CBF4438515A99F99006F9EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		CBF4438715A99F9A006F9EE5 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		CBF4438815A99F9A006F9EE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CBF4438B15A99F9A006F9EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBF4436E15A99F99006F9EE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBF4437615A99F99006F9EE5 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBF4436615A99F99006F9EE5 = {
+			isa = PBXGroup;
+			children = (
+				CBF4437B15A99F99006F9EE5 /* LaZyGame */,
+				CBF4437415A99F99006F9EE5 /* Frameworks */,
+				CBF4437215A99F99006F9EE5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBF4437215A99F99006F9EE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBF4437115A99F99006F9EE5 /* LaZyGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBF4437415A99F99006F9EE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF4437515A99F99006F9EE5 /* Cocoa.framework */,
+				CBF4437715A99F99006F9EE5 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBF4437715A99F99006F9EE5 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CBF4437815A99F99006F9EE5 /* AppKit.framework */,
+				CBF4437915A99F99006F9EE5 /* CoreData.framework */,
+				CBF4437A15A99F99006F9EE5 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CBF4437B15A99F99006F9EE5 /* LaZyGame */ = {
+			isa = PBXGroup;
+			children = (
+				CBF4438715A99F9A006F9EE5 /* AppDelegate.h */,
+				CBF4438815A99F9A006F9EE5 /* AppDelegate.m */,
+				CBF4438A15A99F9A006F9EE5 /* MainMenu.xib */,
+				CBF4437C15A99F99006F9EE5 /* Supporting Files */,
+			);
+			path = LaZyGame;
+			sourceTree = "<group>";
+		};
+		CBF4437C15A99F99006F9EE5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBF4437D15A99F99006F9EE5 /* LaZyGame-Info.plist */,
+				CBF4437E15A99F99006F9EE5 /* InfoPlist.strings */,
+				CBF4438115A99F99006F9EE5 /* main.m */,
+				CBF4438315A99F99006F9EE5 /* LaZyGame-Prefix.pch */,
+				CBF4438415A99F99006F9EE5 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CBF4437015A99F99006F9EE5 /* LaZyGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBF4438F15A99F9A006F9EE5 /* Build configuration list for PBXNativeTarget "LaZyGame" */;
+			buildPhases = (
+				CBF4436D15A99F99006F9EE5 /* Sources */,
+				CBF4436E15A99F99006F9EE5 /* Frameworks */,
+				CBF4436F15A99F99006F9EE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LaZyGame;
+			productName = LaZyGame;
+			productReference = CBF4437115A99F99006F9EE5 /* LaZyGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBF4436815A99F99006F9EE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Wynter Woods";
+			};
+			buildConfigurationList = CBF4436B15A99F99006F9EE5 /* Build configuration list for PBXProject "LaZyGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CBF4436615A99F99006F9EE5;
+			productRefGroup = CBF4437215A99F99006F9EE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBF4437015A99F99006F9EE5 /* LaZyGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBF4436F15A99F99006F9EE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBF4438015A99F99006F9EE5 /* InfoPlist.strings in Resources */,
+				CBF4438615A99F99006F9EE5 /* Credits.rtf in Resources */,
+				CBF4438C15A99F9A006F9EE5 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBF4436D15A99F99006F9EE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBF4438215A99F99006F9EE5 /* main.m in Sources */,
+				CBF4438915A99F9A006F9EE5 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CBF4437E15A99F99006F9EE5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBF4437F15A99F99006F9EE5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CBF4438415A99F99006F9EE5 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBF4438515A99F99006F9EE5 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		CBF4438A15A99F9A006F9EE5 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CBF4438B15A99F9A006F9EE5 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CBF4438D15A99F9A006F9EE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CBF4438E15A99F9A006F9EE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CBF4439015A99F9A006F9EE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LaZyGame/LaZyGame-Prefix.pch";
+				INFOPLIST_FILE = "LaZyGame/LaZyGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CBF4439115A99F9A006F9EE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LaZyGame/LaZyGame-Prefix.pch";
+				INFOPLIST_FILE = "LaZyGame/LaZyGame-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBF4436B15A99F99006F9EE5 /* Build configuration list for PBXProject "LaZyGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBF4438D15A99F9A006F9EE5 /* Debug */,
+				CBF4438E15A99F9A006F9EE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBF4438F15A99F9A006F9EE5 /* Build configuration list for PBXNativeTarget "LaZyGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBF4439015A99F9A006F9EE5 /* Debug */,
+				CBF4439115A99F9A006F9EE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBF4436815A99F99006F9EE5 /* Project object */;
+}
