@@ -7,28 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB60603515B051D700D1CDD1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CB60601215B051D600D1CDD1 /* Credits.rtf */; };
+		CB60603615B051D700D1CDD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB60601415B051D600D1CDD1 /* InfoPlist.strings */; };
+		CB60603715B051D700D1CDD1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB60601615B051D600D1CDD1 /* MainMenu.xib */; };
+		CB60603C15B051D700D1CDD1 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60602615B051D600D1CDD1 /* Object.cpp */; };
+		CB60605015B071C300D1CDD1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60604D15B071C300D1CDD1 /* main.cpp */; };
+		CB60605B15B071CE00D1CDD1 /* LazyEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605415B071CE00D1CDD1 /* LazyEvent.cpp */; };
+		CB60605C15B071CE00D1CDD1 /* LazyEventDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605615B071CE00D1CDD1 /* LazyEventDistributor.cpp */; };
+		CB60605D15B071CE00D1CDD1 /* LazyWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605915B071CE00D1CDD1 /* LazyWindow.cpp */; };
+		CBA2F8FB15BB60B100AB35ED /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA2F8FA15BB60B100AB35ED /* SDL2.framework */; };
+		CBCBCB3115BA467400D2F251 /* LazyEventResponder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBCBCB2F15BA467400D2F251 /* LazyEventResponder.cpp */; };
 		CBF4437615A99F99006F9EE5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF4437515A99F99006F9EE5 /* Cocoa.framework */; };
-		CBF4438015A99F99006F9EE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBF4437E15A99F99006F9EE5 /* InfoPlist.strings */; };
-		CBF4438215A99F99006F9EE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4438115A99F99006F9EE5 /* main.m */; };
-		CBF4438615A99F99006F9EE5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CBF4438415A99F99006F9EE5 /* Credits.rtf */; };
-		CBF4438915A99F9A006F9EE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CBF4438815A99F9A006F9EE5 /* AppDelegate.m */; };
-		CBF4438C15A99F9A006F9EE5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBF4438A15A99F9A006F9EE5 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB60601315B051D600D1CDD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		CB60601515B051D600D1CDD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB60601715B051D600D1CDD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CB60601C15B051D600D1CDD1 /* LaZyGame-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "LaZyGame-Info.plist"; sourceTree = "<group>"; };
+		CB60601D15B051D600D1CDD1 /* LaZyGame-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LaZyGame-Prefix.pch"; sourceTree = "<group>"; };
+		CB60602215B051D600D1CDD1 /* Crystal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crystal.h; sourceTree = "<group>"; };
+		CB60602315B051D600D1CDD1 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		CB60602415B051D600D1CDD1 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
+		CB60602515B051D600D1CDD1 /* Memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Memory.h; sourceTree = "<group>"; };
+		CB60602615B051D600D1CDD1 /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		CB60602715B051D600D1CDD1 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		CB60602915B051D600D1CDD1 /* Optional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Optional.h; sourceTree = "<group>"; };
+		CB60602A15B051D600D1CDD1 /* Primitives.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Primitives.h; sourceTree = "<group>"; };
+		CB60602B15B051D600D1CDD1 /* TypeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeInfo.h; sourceTree = "<group>"; };
+		CB60602C15B051D600D1CDD1 /* Types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		CB60602F15B051D600D1CDD1 /* delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = delegate.h; sourceTree = "<group>"; };
+		CB60603015B051D600D1CDD1 /* sigslot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sigslot.h; sourceTree = "<group>"; };
+		CB60604D15B071C300D1CDD1 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CB60604E15B071C300D1CDD1 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		CB60605415B071CE00D1CDD1 /* LazyEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LazyEvent.cpp; sourceTree = "<group>"; };
+		CB60605515B071CE00D1CDD1 /* LazyEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyEvent.h; sourceTree = "<group>"; };
+		CB60605615B071CE00D1CDD1 /* LazyEventDistributor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LazyEventDistributor.cpp; sourceTree = "<group>"; };
+		CB60605715B071CE00D1CDD1 /* LazyEventDistributor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyEventDistributor.h; sourceTree = "<group>"; };
+		CB60605915B071CE00D1CDD1 /* LazyWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LazyWindow.cpp; sourceTree = "<group>"; };
+		CB60605A15B071CE00D1CDD1 /* LazyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyWindow.h; sourceTree = "<group>"; };
+		CBA2F8F815BA520C00AB35ED /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		CBA2F8FA15BB60B100AB35ED /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = lib/SDL2.framework; sourceTree = "<group>"; };
+		CBCBCB2F15BA467400D2F251 /* LazyEventResponder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LazyEventResponder.cpp; sourceTree = "<group>"; };
+		CBCBCB3015BA467400D2F251 /* LazyEventResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyEventResponder.h; sourceTree = "<group>"; };
 		CBF4437115A99F99006F9EE5 /* LaZyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaZyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF4437515A99F99006F9EE5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CBF4437815A99F99006F9EE5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CBF4437915A99F99006F9EE5 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CBF4437A15A99F99006F9EE5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CBF4437D15A99F99006F9EE5 /* LaZyGame-Info.plist */ = {isa = PBXFileReference; path = "LaZyGame-Info.plist"; sourceTree = "<group>"; };
-		CBF4437F15A99F99006F9EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CBF4438115A99F99006F9EE5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CBF4438315A99F99006F9EE5 /* LaZyGame-Prefix.pch */ = {isa = PBXFileReference; path = "LaZyGame-Prefix.pch"; sourceTree = "<group>"; };
-		CBF4438515A99F99006F9EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		CBF4438715A99F9A006F9EE5 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
-		CBF4438815A99F9A006F9EE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CBF4438B15A99F9A006F9EE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA2F8FB15BB60B100AB35ED /* SDL2.framework in Frameworks */,
 				CBF4437615A99F99006F9EE5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,9 +70,108 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB60601115B051D600D1CDD1 /* lazy */ = {
+			isa = PBXGroup;
+			children = (
+				CB60605215B071CE00D1CDD1 /* system */,
+				CB60601215B051D600D1CDD1 /* Credits.rtf */,
+				CB60601415B051D600D1CDD1 /* InfoPlist.strings */,
+				CB60601615B051D600D1CDD1 /* MainMenu.xib */,
+				CB60601C15B051D600D1CDD1 /* LaZyGame-Info.plist */,
+				CB60601D15B051D600D1CDD1 /* LaZyGame-Prefix.pch */,
+			);
+			path = lazy;
+			sourceTree = SOURCE_ROOT;
+		};
+		CB60602015B051D600D1CDD1 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				CB60602115B051D600D1CDD1 /* Crystal */,
+				CB60602D15B051D600D1CDD1 /* EfficientDelegates */,
+			);
+			path = lib;
+			sourceTree = SOURCE_ROOT;
+		};
+		CB60602115B051D600D1CDD1 /* Crystal */ = {
+			isa = PBXGroup;
+			children = (
+				CB60602215B051D600D1CDD1 /* Crystal.h */,
+				CB60602315B051D600D1CDD1 /* Event.h */,
+				CB60602415B051D600D1CDD1 /* Math.h */,
+				CB60602515B051D600D1CDD1 /* Memory.h */,
+				CB60602615B051D600D1CDD1 /* Object.cpp */,
+				CB60602715B051D600D1CDD1 /* Object.h */,
+				CB60602915B051D600D1CDD1 /* Optional.h */,
+				CB60602A15B051D600D1CDD1 /* Primitives.h */,
+				CB60602B15B051D600D1CDD1 /* TypeInfo.h */,
+				CB60602C15B051D600D1CDD1 /* Types.h */,
+				CBA2F8F815BA520C00AB35ED /* Config.h */,
+			);
+			path = Crystal;
+			sourceTree = "<group>";
+		};
+		CB60602D15B051D600D1CDD1 /* EfficientDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				CB60602E15B051D600D1CDD1 /* include */,
+			);
+			path = EfficientDelegates;
+			sourceTree = "<group>";
+		};
+		CB60602E15B051D600D1CDD1 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CB60602F15B051D600D1CDD1 /* delegate.h */,
+				CB60603015B051D600D1CDD1 /* sigslot.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		CB60604C15B071C300D1CDD1 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				CB60604D15B071C300D1CDD1 /* main.cpp */,
+				CB60604E15B071C300D1CDD1 /* main.h */,
+			);
+			path = game;
+			sourceTree = SOURCE_ROOT;
+		};
+		CB60605215B071CE00D1CDD1 /* system */ = {
+			isa = PBXGroup;
+			children = (
+				CB60605315B071CE00D1CDD1 /* event */,
+				CB60605815B071CE00D1CDD1 /* window */,
+			);
+			name = system;
+			path = lazy/system;
+			sourceTree = SOURCE_ROOT;
+		};
+		CB60605315B071CE00D1CDD1 /* event */ = {
+			isa = PBXGroup;
+			children = (
+				CB60605415B071CE00D1CDD1 /* LazyEvent.cpp */,
+				CB60605515B071CE00D1CDD1 /* LazyEvent.h */,
+				CB60605615B071CE00D1CDD1 /* LazyEventDistributor.cpp */,
+				CB60605715B071CE00D1CDD1 /* LazyEventDistributor.h */,
+				CBCBCB2F15BA467400D2F251 /* LazyEventResponder.cpp */,
+				CBCBCB3015BA467400D2F251 /* LazyEventResponder.h */,
+			);
+			path = event;
+			sourceTree = "<group>";
+		};
+		CB60605815B071CE00D1CDD1 /* window */ = {
+			isa = PBXGroup;
+			children = (
+				CB60605915B071CE00D1CDD1 /* LazyWindow.cpp */,
+				CB60605A15B071CE00D1CDD1 /* LazyWindow.h */,
+			);
+			path = window;
+			sourceTree = "<group>";
+		};
 		CBF4436615A99F99006F9EE5 = {
 			isa = PBXGroup;
 			children = (
+				CBA2F8FA15BB60B100AB35ED /* SDL2.framework */,
 				CBF4437B15A99F99006F9EE5 /* LaZyGame */,
 				CBF4437415A99F99006F9EE5 /* Frameworks */,
 				CBF4437215A99F99006F9EE5 /* Products */,
@@ -82,24 +208,11 @@
 		CBF4437B15A99F99006F9EE5 /* LaZyGame */ = {
 			isa = PBXGroup;
 			children = (
-				CBF4438715A99F9A006F9EE5 /* AppDelegate.h */,
-				CBF4438815A99F9A006F9EE5 /* AppDelegate.m */,
-				CBF4438A15A99F9A006F9EE5 /* MainMenu.xib */,
-				CBF4437C15A99F99006F9EE5 /* Supporting Files */,
+				CB60604C15B071C300D1CDD1 /* game */,
+				CB60601115B051D600D1CDD1 /* lazy */,
+				CB60602015B051D600D1CDD1 /* lib */,
 			);
 			path = LaZyGame;
-			sourceTree = "<group>";
-		};
-		CBF4437C15A99F99006F9EE5 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CBF4437D15A99F99006F9EE5 /* LaZyGame-Info.plist */,
-				CBF4437E15A99F99006F9EE5 /* InfoPlist.strings */,
-				CBF4438115A99F99006F9EE5 /* main.m */,
-				CBF4438315A99F99006F9EE5 /* LaZyGame-Prefix.pch */,
-				CBF4438415A99F99006F9EE5 /* Credits.rtf */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,9 +266,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBF4438015A99F99006F9EE5 /* InfoPlist.strings in Resources */,
-				CBF4438615A99F99006F9EE5 /* Credits.rtf in Resources */,
-				CBF4438C15A99F9A006F9EE5 /* MainMenu.xib in Resources */,
+				CB60603515B051D700D1CDD1 /* Credits.rtf in Resources */,
+				CB60603615B051D700D1CDD1 /* InfoPlist.strings in Resources */,
+				CB60603715B051D700D1CDD1 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,34 +279,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBF4438215A99F99006F9EE5 /* main.m in Sources */,
-				CBF4438915A99F9A006F9EE5 /* AppDelegate.m in Sources */,
+				CB60603C15B051D700D1CDD1 /* Object.cpp in Sources */,
+				CB60605015B071C300D1CDD1 /* main.cpp in Sources */,
+				CB60605B15B071CE00D1CDD1 /* LazyEvent.cpp in Sources */,
+				CB60605C15B071CE00D1CDD1 /* LazyEventDistributor.cpp in Sources */,
+				CB60605D15B071CE00D1CDD1 /* LazyWindow.cpp in Sources */,
+				CBCBCB3115BA467400D2F251 /* LazyEventResponder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CBF4437E15A99F99006F9EE5 /* InfoPlist.strings */ = {
+		CB60601215B051D600D1CDD1 /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CBF4437F15A99F99006F9EE5 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CBF4438415A99F99006F9EE5 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CBF4438515A99F99006F9EE5 /* en */,
+				CB60601315B051D600D1CDD1 /* en */,
 			);
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		CBF4438A15A99F9A006F9EE5 /* MainMenu.xib */ = {
+		CB60601415B051D600D1CDD1 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CBF4438B15A99F9A006F9EE5 /* en */,
+				CB60601515B051D600D1CDD1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB60601615B051D600D1CDD1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB60601715B051D600D1CDD1 /* en */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -255,9 +372,19 @@
 		CBF4439015A99F9A006F9EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Library/Frameworks/**",
+					"\"$(SRCROOT)/lib\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LaZyGame/LaZyGame-Prefix.pch";
-				INFOPLIST_FILE = "LaZyGame/LaZyGame-Info.plist";
+				GCC_PREFIX_HEADER = "lazy/LaZyGame-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					lib,
+					lazy,
+				);
+				INFOPLIST_FILE = "lazy/LaZyGame-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -266,9 +393,19 @@
 		CBF4439115A99F9A006F9EE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Library/Frameworks/**",
+					"\"$(SRCROOT)/lib\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LaZyGame/LaZyGame-Prefix.pch";
-				INFOPLIST_FILE = "LaZyGame/LaZyGame-Info.plist";
+				GCC_PREFIX_HEADER = "lazy/LaZyGame-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					lib,
+					lazy,
+				);
+				INFOPLIST_FILE = "lazy/LaZyGame-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -293,6 +430,7 @@
 				CBF4439115A99F9A006F9EE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
