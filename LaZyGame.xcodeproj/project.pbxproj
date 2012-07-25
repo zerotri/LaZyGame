@@ -15,10 +15,25 @@
 		CB60605B15B071CE00D1CDD1 /* LazyEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605415B071CE00D1CDD1 /* LazyEvent.cpp */; };
 		CB60605C15B071CE00D1CDD1 /* LazyEventDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605615B071CE00D1CDD1 /* LazyEventDistributor.cpp */; };
 		CB60605D15B071CE00D1CDD1 /* LazyWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605915B071CE00D1CDD1 /* LazyWindow.cpp */; };
+		CB72DEB015BF9D020009911C /* SDL2.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBA2F8FA15BB60B100AB35ED /* SDL2.framework */; };
 		CBA2F8FB15BB60B100AB35ED /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA2F8FA15BB60B100AB35ED /* SDL2.framework */; };
 		CBCBCB3115BA467400D2F251 /* LazyEventResponder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBCBCB2F15BA467400D2F251 /* LazyEventResponder.cpp */; };
 		CBF4437615A99F99006F9EE5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF4437515A99F99006F9EE5 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CB72DEAE15BF9CEF0009911C /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CB72DEB015BF9D020009911C /* SDL2.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CB60601315B051D600D1CDD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -225,6 +240,7 @@
 				CBF4436D15A99F99006F9EE5 /* Sources */,
 				CBF4436E15A99F99006F9EE5 /* Frameworks */,
 				CBF4436F15A99F99006F9EE5 /* Resources */,
+				CB72DEAE15BF9CEF0009911C /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
