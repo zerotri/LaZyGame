@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Wynter Woods. All rights reserved.
 //
 
-#ifndef __LaZyGame__LazyEventResponder__
-#define __LaZyGame__LazyEventResponder__
+#ifndef LAZY_EVENTRESPONDER_H
+#define LAZY_EVENTRESPONDER_H
 
 #include <iostream>
 #include <functional>
@@ -19,4 +19,4 @@ namespace Lazy{
     };
 }
 
-#endif /* defined(__LaZyGame__LazyEventResponder__) */
+#endif

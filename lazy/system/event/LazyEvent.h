@@ -1,13 +1,9 @@
-//
-//  LazyEvent.h
-//  LaZyGame
-//
-//  Created by Wynter Woods on 7/11/12.
-//  Copyright (c) 2012 Wynter Woods. All rights reserved.
-//
-
-#ifndef __LaZyGame__LazyEvent__
-#define __LaZyGame__LazyEvent__
+//----------------------------------------------------------------------------
+// File:         LazyEvent.h
+// Description:  An event system for the Crystal library
+//----------------------------------------------------------------------------
+#ifndef LAZY_EVENT_H
+#define LAZY_EVENT_H
 
 #include <iostream>
 #include "Crystal/Object.h"
@@ -24,4 +20,4 @@ namespace Lazy
         }
     };
 }
-#endif /* defined(__LaZyGame__LazyEvent__) */
+#endif

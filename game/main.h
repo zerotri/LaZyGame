@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Wynter Woods. All rights reserved.
 //
 
-#ifndef __LaZyGame__main__
-#define __LaZyGame__main__
+#ifndef LAZY_MAIN_H
+#define LAZY_MAIN_H
 
 #include <iostream>
 
-#endif /* defined(__LaZyGame__main__) */
+#endif

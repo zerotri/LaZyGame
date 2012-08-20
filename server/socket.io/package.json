@@ -1,0 +1,24 @@
+{
+  "name": "nodeapps-socket.io",
+  "author": {
+    "name": "Nodejitsu Inc.",
+    "email": "support@nodejitsu.com"
+  },
+  "scripts": {
+    "start": "./bin/server"
+  },
+  "version": "0.1.0-1",
+  "dependencies": {
+    "socket.io": "v0.8.x",
+    "express": "v2.5.x"
+  },
+  "analyze": false,
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "dist": {
+    "shasum": "249ea1841c30f4c0ce1dd86ee476a2d0eca42ae2"
+  }
+}

@@ -10,34 +10,23 @@
 #include "SDL2/SDL.h"
 
 Lazy::Window::Window(int width, int height)
-    :   mainWindow(NULL),
-        renderer(NULL),
+    :   window(NULL),
         width(width),
         height(height)
 {
     SDL_Init(SDL_INIT_EVERYTHING);
     
-    mainWindow = SDL_CreateWindow("LaZyGame", 0, 0, width, height, 0);
-    if( mainWindow == NULL)
-    {
-        //throw error here
-    }
-    
-    renderer = SDL_CreateRenderer((SDL_Window*)mainWindow, -1, SDL_RENDERER_ACCELERATED);
-    if( renderer == NULL)
+    window = SDL_CreateWindow("LaZyGame", 0, 0, width, height, 0);
+    if( window == NULL)
     {
         //throw error here
     }
 }
 Lazy::Window::~Window()
 {
-    if( this->renderer != NULL)
+    if( this->window != NULL)
     {
-        SDL_DestroyRenderer((SDL_Renderer*)this->renderer);
-    }
-    if( this->mainWindow != NULL)
-    {
-        SDL_DestroyWindow((SDL_Window*)this->mainWindow);
+        SDL_DestroyWindow((SDL_Window*)this->window);
     }
     SDL_Quit();
 }
@@ -56,4 +45,9 @@ int Lazy::Window::HandleEvents()
         }
     }
     return true;
+}
+int Lazy::Window::FlipBuffer()
+{
+    SDL_UpdateWindowSurface((SDL_Window*)this->window);
+    return 0;
 }

@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Wynter Woods. All rights reserved.
 //
 
-#ifndef __LaZyGame__LazyWindow__
-#define __LaZyGame__LazyWindow__
+#ifndef LAZY_WINDOW_H
+#define LAZY_WINDOW_H
 
 #include <iostream>
 
@@ -17,13 +17,14 @@ namespace Lazy{
     protected:
         int width;
         int height;
-        void* mainWindow;
-        void* renderer;
+        void* window;
     public:
         Window(int,int);
         ~Window();
         int HandleEvents();
+        int FlipBuffer();
+        friend class GraphicsDevice;
     };
 }
 
-#endif /* defined(__LaZyGame__LazyWindow__) */
+#endif

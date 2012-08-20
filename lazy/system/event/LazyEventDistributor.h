@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 Wynter Woods. All rights reserved.
 //
 
-#ifndef __LaZyGame__LazyEventDistributor__
-#define __LaZyGame__LazyEventDistributor__
+#ifndef LAZY_EVENTDISTRIBUTOR_H
+#define LAZY_EVENTDISTRIBUTOR_H
 
 #include <iostream>
 #include <vector>
@@ -29,4 +29,4 @@ namespace Lazy
         void subscribe(Crystal::Id, std::function<void (const Lazy::Event&) >);
     };
 }
-#endif /* defined(__LaZyGame__LazyEventDistributor__) */
+#endif
