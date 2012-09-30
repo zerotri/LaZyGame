@@ -39,6 +39,10 @@
 		CB0BE85D15DF0F080094FAD3 /* ltm.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0BE82D15DF0F080094FAD3 /* ltm.c */; };
 		CB0BE85E15DF0F080094FAD3 /* linit.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0BE82E15DF0F080094FAD3 /* linit.c */; };
 		CB0BE85F15DF0F080094FAD3 /* lzio.c in Sources */ = {isa = PBXBuildFile; fileRef = CB0BE82F15DF0F080094FAD3 /* lzio.c */; };
+		CB13A710160AD23600F8A26A /* Exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB13A706160AD23600F8A26A /* Exception.cpp */; };
+		CB13A711160AD23600F8A26A /* Reference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB13A709160AD23600F8A26A /* Reference.cpp */; };
+		CB13A712160AD23600F8A26A /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB13A70B160AD23600F8A26A /* Object.cpp */; };
+		CB13A713160AD23600F8A26A /* runtime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB13A70D160AD23600F8A26A /* runtime.cpp */; };
 		CB1B8DA015CE2CC900493F33 /* LazyGraphicsDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB1B8D9E15CE2CC900493F33 /* LazyGraphicsDevice.cpp */; };
 		CB60603515B051D700D1CDD1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CB60601215B051D600D1CDD1 /* Credits.rtf */; };
 		CB60603615B051D700D1CDD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB60601415B051D600D1CDD1 /* InfoPlist.strings */; };
@@ -51,6 +55,9 @@
 		CB72DEB015BF9D020009911C /* SDL2.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBA2F8FA15BB60B100AB35ED /* SDL2.framework */; };
 		CBA2F8FB15BB60B100AB35ED /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA2F8FA15BB60B100AB35ED /* SDL2.framework */; };
 		CBCBCB3115BA467400D2F251 /* LazyEventResponder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBCBCB2F15BA467400D2F251 /* LazyEventResponder.cpp */; };
+		CBEA0FB5160FEE5F00E6818C /* LazyEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBEA0FB3160FEE5F00E6818C /* LazyEntity.cpp */; };
+		CBEA0FB8160FEF8A00E6818C /* LazyLuaEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBEA0FB7160FEF8A00E6818C /* LazyLuaEntity.cpp */; };
+		CBEA44DA161509700005A4B8 /* LazyLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBEA44D9161509700005A4B8 /* LazyLua.cpp */; };
 		CBF4437615A99F99006F9EE5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF4437515A99F99006F9EE5 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -126,8 +133,21 @@
 		CB0BE83A15DF0F080094FAD3 /* lundump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lundump.h; path = lua/src/lundump.h; sourceTree = "<group>"; };
 		CB0BE83B15DF0F080094FAD3 /* lapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lapi.h; path = lua/src/lapi.h; sourceTree = "<group>"; };
 		CB0BE83C15DF0F080094FAD3 /* lua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = lua.hpp; path = lua/src/lua.hpp; sourceTree = "<group>"; };
+		CB13A706160AD23600F8A26A /* Exception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Exception.cpp; path = love/Exception.cpp; sourceTree = "<group>"; };
+		CB13A707160AD23600F8A26A /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Exception.h; path = love/Exception.h; sourceTree = "<group>"; };
+		CB13A708160AD23600F8A26A /* StringMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringMap.h; path = love/StringMap.h; sourceTree = "<group>"; };
+		CB13A709160AD23600F8A26A /* Reference.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Reference.cpp; path = love/Reference.cpp; sourceTree = "<group>"; };
+		CB13A70A160AD23600F8A26A /* Reference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reference.h; path = love/Reference.h; sourceTree = "<group>"; };
+		CB13A70B160AD23600F8A26A /* Object.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Object.cpp; path = love/Object.cpp; sourceTree = "<group>"; };
+		CB13A70C160AD23600F8A26A /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Object.h; path = love/Object.h; sourceTree = "<group>"; };
+		CB13A70D160AD23600F8A26A /* runtime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = runtime.cpp; path = love/runtime.cpp; sourceTree = "<group>"; };
+		CB13A70E160AD23600F8A26A /* runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = runtime.h; path = love/runtime.h; sourceTree = "<group>"; };
+		CB13A70F160AD23600F8A26A /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = love/types.h; sourceTree = "<group>"; };
+		CB13A714160BDB4600F8A26A /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Module.h; path = love/Module.h; sourceTree = "<group>"; };
 		CB1B8D9E15CE2CC900493F33 /* LazyGraphicsDevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LazyGraphicsDevice.cpp; path = lazy/graphics/LazyGraphicsDevice.cpp; sourceTree = SOURCE_ROOT; };
 		CB1B8D9F15CE2CC900493F33 /* LazyGraphicsDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LazyGraphicsDevice.h; path = lazy/graphics/LazyGraphicsDevice.h; sourceTree = SOURCE_ROOT; };
+		CB38D74215FE7520004674EE /* LazyLua.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LazyLua.h; path = lua/LazyLua.h; sourceTree = "<group>"; };
+		CB38D74315FE75A2004674EE /* LazyLuaGraphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LazyLuaGraphics.cpp; path = lua/LazyLuaGraphics.cpp; sourceTree = "<group>"; };
 		CB60601315B051D600D1CDD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		CB60601515B051D600D1CDD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB60601715B051D600D1CDD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -158,6 +178,10 @@
 		CBA2F8FA15BB60B100AB35ED /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = lib/SDL2.framework; sourceTree = "<group>"; };
 		CBCBCB2F15BA467400D2F251 /* LazyEventResponder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LazyEventResponder.cpp; sourceTree = "<group>"; };
 		CBCBCB3015BA467400D2F251 /* LazyEventResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyEventResponder.h; sourceTree = "<group>"; };
+		CBEA0FB3160FEE5F00E6818C /* LazyEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LazyEntity.cpp; path = entity/LazyEntity.cpp; sourceTree = "<group>"; };
+		CBEA0FB4160FEE5F00E6818C /* LazyEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LazyEntity.h; path = entity/LazyEntity.h; sourceTree = "<group>"; };
+		CBEA0FB7160FEF8A00E6818C /* LazyLuaEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LazyLuaEntity.cpp; path = lua/LazyLuaEntity.cpp; sourceTree = "<group>"; };
+		CBEA44D9161509700005A4B8 /* LazyLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LazyLua.cpp; path = lua/LazyLua.cpp; sourceTree = "<group>"; };
 		CBF4437115A99F99006F9EE5 /* LaZyGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaZyGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF4437515A99F99006F9EE5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CBF4437815A99F99006F9EE5 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -242,18 +266,49 @@
 			name = Lua;
 			sourceTree = "<group>";
 		};
+		CB13A704160AD21900F8A26A /* love */ = {
+			isa = PBXGroup;
+			children = (
+				CB13A714160BDB4600F8A26A /* Module.h */,
+				CB13A706160AD23600F8A26A /* Exception.cpp */,
+				CB13A707160AD23600F8A26A /* Exception.h */,
+				CB13A708160AD23600F8A26A /* StringMap.h */,
+				CB13A709160AD23600F8A26A /* Reference.cpp */,
+				CB13A70A160AD23600F8A26A /* Reference.h */,
+				CB13A70B160AD23600F8A26A /* Object.cpp */,
+				CB13A70C160AD23600F8A26A /* Object.h */,
+				CB13A70D160AD23600F8A26A /* runtime.cpp */,
+				CB13A70E160AD23600F8A26A /* runtime.h */,
+				CB13A70F160AD23600F8A26A /* types.h */,
+			);
+			name = love;
+			sourceTree = "<group>";
+		};
 		CB1B8DA215CE2CD100493F33 /* graphics */ = {
 			isa = PBXGroup;
 			children = (
-				CB1B8D9E15CE2CC900493F33 /* LazyGraphicsDevice.cpp */,
 				CB1B8D9F15CE2CC900493F33 /* LazyGraphicsDevice.h */,
+				CB1B8D9E15CE2CC900493F33 /* LazyGraphicsDevice.cpp */,
 			);
 			name = graphics;
+			sourceTree = "<group>";
+		};
+		CB38D74015FE74D2004674EE /* lua */ = {
+			isa = PBXGroup;
+			children = (
+				CB38D74215FE7520004674EE /* LazyLua.h */,
+				CB38D74315FE75A2004674EE /* LazyLuaGraphics.cpp */,
+				CBEA0FB7160FEF8A00E6818C /* LazyLuaEntity.cpp */,
+				CBEA44D9161509700005A4B8 /* LazyLua.cpp */,
+			);
+			name = lua;
 			sourceTree = "<group>";
 		};
 		CB60601115B051D600D1CDD1 /* lazy */ = {
 			isa = PBXGroup;
 			children = (
+				CBEA0FB1160FEE2D00E6818C /* entity */,
+				CB38D74015FE74D2004674EE /* lua */,
 				CB1B8DA215CE2CD100493F33 /* graphics */,
 				CB60605215B071CE00D1CDD1 /* system */,
 				CB60601215B051D600D1CDD1 /* Credits.rtf */,
@@ -268,6 +323,7 @@
 		CB60602015B051D600D1CDD1 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				CB13A704160AD21900F8A26A /* love */,
 				CB0BE86115DF0F0C0094FAD3 /* Lua */,
 				CB60602115B051D600D1CDD1 /* Crystal */,
 				CB60602D15B051D600D1CDD1 /* EfficientDelegates */,
@@ -350,6 +406,15 @@
 				CB60605A15B071CE00D1CDD1 /* LazyWindow.h */,
 			);
 			path = window;
+			sourceTree = "<group>";
+		};
+		CBEA0FB1160FEE2D00E6818C /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				CBEA0FB3160FEE5F00E6818C /* LazyEntity.cpp */,
+				CBEA0FB4160FEE5F00E6818C /* LazyEntity.h */,
+			);
+			name = entity;
 			sourceTree = "<group>";
 		};
 		CBF4436615A99F99006F9EE5 = {
@@ -503,6 +568,13 @@
 				CB0BE85D15DF0F080094FAD3 /* ltm.c in Sources */,
 				CB0BE85E15DF0F080094FAD3 /* linit.c in Sources */,
 				CB0BE85F15DF0F080094FAD3 /* lzio.c in Sources */,
+				CB13A710160AD23600F8A26A /* Exception.cpp in Sources */,
+				CB13A711160AD23600F8A26A /* Reference.cpp in Sources */,
+				CB13A712160AD23600F8A26A /* Object.cpp in Sources */,
+				CB13A713160AD23600F8A26A /* runtime.cpp in Sources */,
+				CBEA0FB5160FEE5F00E6818C /* LazyEntity.cpp in Sources */,
+				CBEA0FB8160FEF8A00E6818C /* LazyLuaEntity.cpp in Sources */,
+				CBEA44DA161509700005A4B8 /* LazyLua.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

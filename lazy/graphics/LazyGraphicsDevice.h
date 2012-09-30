@@ -21,6 +21,8 @@ namespace Lazy
         int width;
         int height;
     public:
+        static GraphicsDevice* instance;
+        
         GraphicsDevice(Window& window);
         ~GraphicsDevice();
         int Clear();

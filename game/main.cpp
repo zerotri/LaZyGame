@@ -18,60 +18,21 @@ extern "C" {
 #include "Lua/src/lauxlib.h"
 #include "Lua/src/lualib.h"
 }
-
+#include "lua/LazyLua.h"
+#include "love/runtime.h"
 #include "lunar.h"
 
-class Account {
-    lua_Number m_balance;
-public:
-    static const char className[];
-    static Lunar<Account>::RegType methods[];
-    
-    Account(lua_State *L)      { m_balance = luaL_checknumber(L, 1); }
-    int deposit (lua_State *L) { m_balance += luaL_checknumber(L, 1); return 0; }
-    int withdraw(lua_State *L) { m_balance -= luaL_checknumber(L, 1); return 0; }
-    int balance (lua_State *L) { lua_pushnumber(L, m_balance); return 1; }
-    ~Account() { printf("deleted Account (%p)\n", this); }
-};
-
-const char Account::className[] = "Account";
-
-Lunar<Account>::RegType Account::methods[] = {
-    LUNAR_DECLARE_METHOD(Account, deposit),
-    LUNAR_DECLARE_METHOD(Account, withdraw),
-    LUNAR_DECLARE_METHOD(Account, balance),
-    {0,0}
-};
 
 const char *program =
-"--[function printf(...) io.write(string.format(unpack(arg))) end]--\n"
-"function hello()\n"
+"for n,v in pairs(lazy) do\n"
+"  print (n,v)\n"
 "end\n"
-"function hate()\n"
-"end\n"
-"function Account:show()\n"
-"  print(\"Account balance = \"..self:balance()..\"\\n\")\n"
-"end\n"
-"function draw()\n"
-"  a = Account(100)\n"
-"  b = Account:new(30)"
-"  a:show()\n"
-"  table.foreach(Account, print)\n"
-"end\n"
-"print(\"Hello World\")\n";
+"\n"
+"entity = lazy.entity.newEntity(32,0)\n"
+"print(lazy.entity.getX(entity))\n"
+"print(lazy.entity.getY(entity))\n"
+"\n";
 
-
-class Entity
-{
-public:
-    Entity(int x, int y)
-    {
-        
-    }
-private:
-    uint64_t x;
-    uint64_t y;
-};
 
 class A : public Lazy::Event
 {
@@ -104,8 +65,10 @@ int main(int argc, char** argv)
     //luaL_openlibs(L);
     luaopen_io(L);
     luaopen_base(L);
+    //Lazy::Lua::registerTypes(L);
+    Lazy::Lua::registerTypes(L);
     
-    Lunar<Account>::Register(L);
+    //Lunar<Account>::Register(L);
 
     /*distro.subscribe(Crystal::GetTypeId<A>(),
                      [=](const Lazy::Event&)
@@ -137,8 +100,8 @@ int main(int argc, char** argv)
         lua_getglobal(Lt[i], "main");
     }*/
     
-    lua_getglobal(L, "draw");
-    lua_pcall(L, 0, 0, 0);
+    //lua_getglobal(L, "draw");
+    //lua_pcall(L, 0, 0, 0);
 
     while(keepRunning)
     {
