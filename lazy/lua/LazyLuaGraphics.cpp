@@ -2,7 +2,7 @@ namespace Lazy
 {
     class LuaGraphics
     {
-        static const luaL_Reg gSpriteFuncs[] = {
+        /*static const luaL_Reg gSpriteFuncs[] = {
             // Creation
             {"new", newSprite},
             {"position", position},
@@ -15,6 +15,6 @@ namespace Lazy
             {"accelerate", accelerate},      
             {"rotate", rotate},  
             {NULL, NULL}
-        };
+        };*/
     };
 };

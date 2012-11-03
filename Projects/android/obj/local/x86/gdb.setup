@@ -1,0 +1,4 @@
+set solib-search-path ./obj/local/x86
+directory /Users/zerotri/Development/Android/ndk/platforms/android-14/arch-x86/usr/include /Users/zerotri/Development/Android/ndk/sources/android/native_app_glue /Users/zerotri/Development/Android/ndk/sources/cxx-stl/system/include jni
+file ./obj/local/x86/app_process
+target remote :5039

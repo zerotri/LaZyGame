@@ -14,9 +14,9 @@ Lazy::Window::Window(int width, int height)
         width(width),
         height(height)
 {
-    SDL_Init(SDL_INIT_EVERYTHING);
+    SDL_Init(SDL_INIT_EVERYTHING );
     
-    window = SDL_CreateWindow("LaZyGame", 0, 0, width, height, 0);
+    window = SDL_CreateWindow("LaZyGame", 0, 0, width, height, SDL_WINDOW_OPENGL);
     if( window == NULL)
     {
         //throw error here
@@ -48,6 +48,7 @@ int Lazy::Window::HandleEvents()
 }
 int Lazy::Window::FlipBuffer()
 {
-    SDL_UpdateWindowSurface((SDL_Window*)this->window);
+    SDL_GL_SwapWindow((SDL_Window*)this->window);
+    //SDL_UpdateWindowSurface((SDL_Window*)this->window);
     return 0;
 }

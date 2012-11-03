@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>LazyGame-Android.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>CBF359531632868E002C2F9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CBF4437015A99F99006F9EE5</key>
 		<dict>
 			<key>primary</key>

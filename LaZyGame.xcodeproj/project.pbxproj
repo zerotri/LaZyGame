@@ -44,6 +44,20 @@
 		CB13A712160AD23600F8A26A /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB13A70B160AD23600F8A26A /* Object.cpp */; };
 		CB13A713160AD23600F8A26A /* runtime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB13A70D160AD23600F8A26A /* runtime.cpp */; };
 		CB1B8DA015CE2CC900493F33 /* LazyGraphicsDevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB1B8D9E15CE2CC900493F33 /* LazyGraphicsDevice.cpp */; };
+		CB5BDC401626801000A71209 /* edtaa3func.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC351626801000A71209 /* edtaa3func.c */; };
+		CB5BDC411626801000A71209 /* font-manager.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC361626801000A71209 /* font-manager.c */; };
+		CB5BDC431626801000A71209 /* platform.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC381626801000A71209 /* platform.c */; };
+		CB5BDC441626801000A71209 /* shader.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC391626801000A71209 /* shader.c */; };
+		CB5BDC451626801000A71209 /* text-buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC3A1626801000A71209 /* text-buffer.c */; };
+		CB5BDC461626801000A71209 /* texture-atlas.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC3B1626801000A71209 /* texture-atlas.c */; };
+		CB5BDC471626801000A71209 /* texture-font.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC3C1626801000A71209 /* texture-font.c */; };
+		CB5BDC481626801000A71209 /* vector.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC3D1626801000A71209 /* vector.c */; };
+		CB5BDC491626801000A71209 /* vertex-attribute.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC3E1626801000A71209 /* vertex-attribute.c */; };
+		CB5BDC4A1626801000A71209 /* vertex-buffer.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC3F1626801000A71209 /* vertex-buffer.c */; };
+		CB5BDC4C1626880300A71209 /* libfreetype.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5BDC4B1626880300A71209 /* libfreetype.6.dylib */; };
+		CB5BDC4E162688F700A71209 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5BDC4D162688F700A71209 /* OpenGL.framework */; };
+		CB5BDC521626A8CB00A71209 /* LazyFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB5BDC501626A8CB00A71209 /* LazyFile.cpp */; };
+		CB5BDC541626AA4D00A71209 /* DroidSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB5BDC531626AA4D00A71209 /* DroidSansMono.ttf */; };
 		CB60603515B051D700D1CDD1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CB60601215B051D600D1CDD1 /* Credits.rtf */; };
 		CB60603615B051D700D1CDD1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB60601415B051D600D1CDD1 /* InfoPlist.strings */; };
 		CB60603715B051D700D1CDD1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB60601615B051D600D1CDD1 /* MainMenu.xib */; };
@@ -53,6 +67,7 @@
 		CB60605C15B071CE00D1CDD1 /* LazyEventDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605615B071CE00D1CDD1 /* LazyEventDistributor.cpp */; };
 		CB60605D15B071CE00D1CDD1 /* LazyWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605915B071CE00D1CDD1 /* LazyWindow.cpp */; };
 		CB72DEB015BF9D020009911C /* SDL2.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBA2F8FA15BB60B100AB35ED /* SDL2.framework */; };
+		CB8C5EDF163FB80C00CE029D /* LaZyMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB8C5EDD163FB80C00CE029D /* LaZyMap.cpp */; };
 		CBA2F8FB15BB60B100AB35ED /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA2F8FA15BB60B100AB35ED /* SDL2.framework */; };
 		CBCBCB3115BA467400D2F251 /* LazyEventResponder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBCBCB2F15BA467400D2F251 /* LazyEventResponder.cpp */; };
 		CBEA0FB5160FEE5F00E6818C /* LazyEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBEA0FB3160FEE5F00E6818C /* LazyEntity.cpp */; };
@@ -148,6 +163,21 @@
 		CB1B8D9F15CE2CC900493F33 /* LazyGraphicsDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LazyGraphicsDevice.h; path = lazy/graphics/LazyGraphicsDevice.h; sourceTree = SOURCE_ROOT; };
 		CB38D74215FE7520004674EE /* LazyLua.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LazyLua.h; path = lua/LazyLua.h; sourceTree = "<group>"; };
 		CB38D74315FE75A2004674EE /* LazyLuaGraphics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LazyLuaGraphics.cpp; path = lua/LazyLuaGraphics.cpp; sourceTree = "<group>"; };
+		CB5BDC351626801000A71209 /* edtaa3func.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = edtaa3func.c; path = "freetype-gl/edtaa3func.c"; sourceTree = "<group>"; };
+		CB5BDC361626801000A71209 /* font-manager.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "font-manager.c"; path = "freetype-gl/font-manager.c"; sourceTree = "<group>"; };
+		CB5BDC381626801000A71209 /* platform.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = platform.c; path = "freetype-gl/platform.c"; sourceTree = "<group>"; };
+		CB5BDC391626801000A71209 /* shader.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = shader.c; path = "freetype-gl/shader.c"; sourceTree = "<group>"; };
+		CB5BDC3A1626801000A71209 /* text-buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "text-buffer.c"; path = "freetype-gl/text-buffer.c"; sourceTree = "<group>"; };
+		CB5BDC3B1626801000A71209 /* texture-atlas.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "texture-atlas.c"; path = "freetype-gl/texture-atlas.c"; sourceTree = "<group>"; };
+		CB5BDC3C1626801000A71209 /* texture-font.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "texture-font.c"; path = "freetype-gl/texture-font.c"; sourceTree = "<group>"; };
+		CB5BDC3D1626801000A71209 /* vector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vector.c; path = "freetype-gl/vector.c"; sourceTree = "<group>"; };
+		CB5BDC3E1626801000A71209 /* vertex-attribute.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "vertex-attribute.c"; path = "freetype-gl/vertex-attribute.c"; sourceTree = "<group>"; };
+		CB5BDC3F1626801000A71209 /* vertex-buffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "vertex-buffer.c"; path = "freetype-gl/vertex-buffer.c"; sourceTree = "<group>"; };
+		CB5BDC4B1626880300A71209 /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreetype.6.dylib; path = ../../../../../../../usr/local/Cellar/freetype/2.4.10/lib/libfreetype.6.dylib; sourceTree = "<group>"; };
+		CB5BDC4D162688F700A71209 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		CB5BDC501626A8CB00A71209 /* LazyFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LazyFile.cpp; path = file/LazyFile.cpp; sourceTree = "<group>"; };
+		CB5BDC511626A8CB00A71209 /* LazyFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LazyFile.h; path = file/LazyFile.h; sourceTree = "<group>"; };
+		CB5BDC531626AA4D00A71209 /* DroidSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DroidSansMono.ttf; sourceTree = "<group>"; };
 		CB60601315B051D600D1CDD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		CB60601515B051D600D1CDD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB60601715B051D600D1CDD1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -174,6 +204,8 @@
 		CB60605915B071CE00D1CDD1 /* LazyWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LazyWindow.cpp; sourceTree = "<group>"; };
 		CB60605A15B071CE00D1CDD1 /* LazyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyWindow.h; sourceTree = "<group>"; };
 		CB7E34CA15E17E8700F4A99B /* lunar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lunar.h; sourceTree = "<group>"; };
+		CB8C5EDD163FB80C00CE029D /* LaZyMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LaZyMap.cpp; path = lazy/map/LaZyMap.cpp; sourceTree = SOURCE_ROOT; };
+		CB8C5EDE163FB80C00CE029D /* LaZyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaZyMap.h; path = lazy/map/LaZyMap.h; sourceTree = SOURCE_ROOT; };
 		CBA2F8F815BA520C00AB35ED /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		CBA2F8FA15BB60B100AB35ED /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = lib/SDL2.framework; sourceTree = "<group>"; };
 		CBCBCB2F15BA467400D2F251 /* LazyEventResponder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LazyEventResponder.cpp; sourceTree = "<group>"; };
@@ -194,6 +226,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5BDC4E162688F700A71209 /* OpenGL.framework in Frameworks */,
+				CB5BDC4C1626880300A71209 /* libfreetype.6.dylib in Frameworks */,
 				CBA2F8FB15BB60B100AB35ED /* SDL2.framework in Frameworks */,
 				CBF4437615A99F99006F9EE5 /* Cocoa.framework in Frameworks */,
 			);
@@ -304,9 +338,36 @@
 			name = lua;
 			sourceTree = "<group>";
 		};
+		CB5BDC3316267FCE00A71209 /* freetype-gl */ = {
+			isa = PBXGroup;
+			children = (
+				CB5BDC351626801000A71209 /* edtaa3func.c */,
+				CB5BDC361626801000A71209 /* font-manager.c */,
+				CB5BDC381626801000A71209 /* platform.c */,
+				CB5BDC391626801000A71209 /* shader.c */,
+				CB5BDC3A1626801000A71209 /* text-buffer.c */,
+				CB5BDC3B1626801000A71209 /* texture-atlas.c */,
+				CB5BDC3C1626801000A71209 /* texture-font.c */,
+				CB5BDC3D1626801000A71209 /* vector.c */,
+				CB5BDC3E1626801000A71209 /* vertex-attribute.c */,
+				CB5BDC3F1626801000A71209 /* vertex-buffer.c */,
+			);
+			name = "freetype-gl";
+			sourceTree = "<group>";
+		};
+		CB5BDC4F1626A7D600A71209 /* file */ = {
+			isa = PBXGroup;
+			children = (
+				CB5BDC501626A8CB00A71209 /* LazyFile.cpp */,
+				CB5BDC511626A8CB00A71209 /* LazyFile.h */,
+			);
+			name = file;
+			sourceTree = "<group>";
+		};
 		CB60601115B051D600D1CDD1 /* lazy */ = {
 			isa = PBXGroup;
 			children = (
+				CB8C5ED8163FB78300CE029D /* map */,
 				CBEA0FB1160FEE2D00E6818C /* entity */,
 				CB38D74015FE74D2004674EE /* lua */,
 				CB1B8DA215CE2CD100493F33 /* graphics */,
@@ -323,6 +384,7 @@
 		CB60602015B051D600D1CDD1 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				CB5BDC3316267FCE00A71209 /* freetype-gl */,
 				CB13A704160AD21900F8A26A /* love */,
 				CB0BE86115DF0F0C0094FAD3 /* Lua */,
 				CB60602115B051D600D1CDD1 /* Crystal */,
@@ -379,6 +441,7 @@
 		CB60605215B071CE00D1CDD1 /* system */ = {
 			isa = PBXGroup;
 			children = (
+				CB5BDC4F1626A7D600A71209 /* file */,
 				CB60605315B071CE00D1CDD1 /* event */,
 				CB60605815B071CE00D1CDD1 /* window */,
 			);
@@ -408,6 +471,16 @@
 			path = window;
 			sourceTree = "<group>";
 		};
+		CB8C5ED8163FB78300CE029D /* map */ = {
+			isa = PBXGroup;
+			children = (
+				CB8C5EDD163FB80C00CE029D /* LaZyMap.cpp */,
+				CB8C5EDE163FB80C00CE029D /* LaZyMap.h */,
+			);
+			name = map;
+			path = ../game;
+			sourceTree = "<group>";
+		};
 		CBEA0FB1160FEE2D00E6818C /* entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +493,9 @@
 		CBF4436615A99F99006F9EE5 = {
 			isa = PBXGroup;
 			children = (
+				CB5BDC531626AA4D00A71209 /* DroidSansMono.ttf */,
+				CB5BDC4D162688F700A71209 /* OpenGL.framework */,
+				CB5BDC4B1626880300A71209 /* libfreetype.6.dylib */,
 				CBA2F8FA15BB60B100AB35ED /* SDL2.framework */,
 				CBF4437B15A99F99006F9EE5 /* LaZyGame */,
 				CBF4437415A99F99006F9EE5 /* Frameworks */,
@@ -466,6 +542,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		CBF359531632868E002C2F9C /* LazyGame-Android */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = CBF359561632868E002C2F9C /* Build configuration list for PBXLegacyTarget "LazyGame-Android" */;
+			buildPhases = (
+			);
+			buildToolPath = "/Users/zerotri/Development/Android/ndk/ndk-build";
+			buildWorkingDirectory = /Volumes/Storage/Users/zerotri/Development/Projects/LaZyGame/Projects/android;
+			dependencies = (
+			);
+			name = "LazyGame-Android";
+			passBuildSettingsInEnvironment = 1;
+			productName = "LazyGame-Android";
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		CBF4437015A99F99006F9EE5 /* LaZyGame */ = {
 			isa = PBXNativeTarget;
@@ -507,6 +600,7 @@
 			projectRoot = "";
 			targets = (
 				CBF4437015A99F99006F9EE5 /* LaZyGame */,
+				CBF359531632868E002C2F9C /* LazyGame-Android */,
 			);
 		};
 /* End PBXProject section */
@@ -516,6 +610,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5BDC541626AA4D00A71209 /* DroidSansMono.ttf in Resources */,
 				CB60603515B051D700D1CDD1 /* Credits.rtf in Resources */,
 				CB60603615B051D700D1CDD1 /* InfoPlist.strings in Resources */,
 				CB60603715B051D700D1CDD1 /* MainMenu.xib in Resources */,
@@ -575,6 +670,18 @@
 				CBEA0FB5160FEE5F00E6818C /* LazyEntity.cpp in Sources */,
 				CBEA0FB8160FEF8A00E6818C /* LazyLuaEntity.cpp in Sources */,
 				CBEA44DA161509700005A4B8 /* LazyLua.cpp in Sources */,
+				CB5BDC401626801000A71209 /* edtaa3func.c in Sources */,
+				CB5BDC411626801000A71209 /* font-manager.c in Sources */,
+				CB5BDC431626801000A71209 /* platform.c in Sources */,
+				CB5BDC441626801000A71209 /* shader.c in Sources */,
+				CB5BDC451626801000A71209 /* text-buffer.c in Sources */,
+				CB5BDC461626801000A71209 /* texture-atlas.c in Sources */,
+				CB5BDC471626801000A71209 /* texture-font.c in Sources */,
+				CB5BDC481626801000A71209 /* vector.c in Sources */,
+				CB5BDC491626801000A71209 /* vertex-attribute.c in Sources */,
+				CB5BDC4A1626801000A71209 /* vertex-buffer.c in Sources */,
+				CB5BDC521626A8CB00A71209 /* LazyFile.cpp in Sources */,
+				CB8C5EDF163FB80C00CE029D /* LaZyMap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +715,31 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CBF359541632868E002C2F9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CBF359551632868E002C2F9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		CBF4438D15A99F9A006F9EE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -673,8 +805,14 @@
 				HEADER_SEARCH_PATHS = (
 					lib,
 					lazy,
+					/usr/local/include,
+					/usr/local/include/freetype2,
 				);
 				INFOPLIST_FILE = "lazy/LaZyGame-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/freetype/2.4.10/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -694,8 +832,14 @@
 				HEADER_SEARCH_PATHS = (
 					lib,
 					lazy,
+					/usr/local/include,
+					/usr/local/include/freetype2,
 				);
 				INFOPLIST_FILE = "lazy/LaZyGame-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/freetype/2.4.10/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -704,6 +848,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CBF359561632868E002C2F9C /* Build configuration list for PBXLegacyTarget "LazyGame-Android" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBF359541632868E002C2F9C /* Debug */,
+				CBF359551632868E002C2F9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CBF4436B15A99F99006F9EE5 /* Build configuration list for PBXProject "LaZyGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

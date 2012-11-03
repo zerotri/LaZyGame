@@ -11,13 +11,9 @@
 #include "graphics/LazyGraphicsDevice.h"
 #include "system/event/LazyEventDistributor.h"
 #include "Crystal/TypeInfo.h"
+#include "system/file/LazyFile.h"
 #include <iostream>
 
-extern "C" {
-#include "Lua/src/lua.h"
-#include "Lua/src/lauxlib.h"
-#include "Lua/src/lualib.h"
-}
 #include "lua/LazyLua.h"
 #include "love/runtime.h"
 #include "lunar.h"
@@ -32,6 +28,10 @@ const char *program =
 "print(lazy.entity.getX(entity))\n"
 "print(lazy.entity.getY(entity))\n"
 "\n";
+
+// --------------------------------------------------------------- add_text ---
+
+
 
 
 class A : public Lazy::Event
@@ -51,24 +51,24 @@ public:
     }
 };
 
+int luax_openfile(const char* filename)
+{
+    //
+    return 0;
+}
+
 //main program loop
 int main(int argc, char** argv)
 {
-    lua_State *L = luaL_newstate();
-    //lua_State *Lt[1000];
+    lua_State *L = 0;
     
     bool keepRunning = true;
     Lazy::EventDistributor distro;
     Lazy::Window window(640,480);
     Lazy::GraphicsDevice graphics(window);
-    
-    //luaL_openlibs(L);
-    luaopen_io(L);
-    luaopen_base(L);
-    //Lazy::Lua::registerTypes(L);
-    Lazy::Lua::registerTypes(L);
-    
-    //Lunar<Account>::Register(L);
+    Lazy::Lua::Machine vm;
+    L = vm.newFiber();
+    vm.LoadProgram(L, program);
 
     /*distro.subscribe(Crystal::GetTypeId<A>(),
                      [=](const Lazy::Event&)
@@ -86,30 +86,16 @@ int main(int argc, char** argv)
         delete window;
         return 1;
     }*/
-    
-    luaL_loadbuffer(L, program, strlen(program), "code");
-    
-    int error = lua_pcall(L, 0, 0, 0);
-    if (error) {
-        fprintf(stderr, "%s", lua_tostring(L, -1));
-        lua_pop(L, 1);
-    }
-    
-    /*for (int i = 0; i < 1000; i++) {
-        Lt[i] = lua_newthread(L);
-        lua_getglobal(Lt[i], "main");
-    }*/
-    
-    //lua_getglobal(L, "draw");
-    //lua_pcall(L, 0, 0, 0);
+
 
     while(keepRunning)
     {
-        //for (int i = 0; i < 1000; i++) {
-        //    lua_resume(Lt[i], 0, 0);
-        //}
+        vm.Run();
         keepRunning = window.HandleEvents();
         graphics.Present();
+        
+        
+        
         window.FlipBuffer();
         graphics.Clear();
     }
