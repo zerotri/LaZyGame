@@ -12,6 +12,7 @@
 #include "CoreFoundation/CoreFoundation.h"
 #endif
 
+
 std::string Lazy::File::getResourcePathForFile(std::string filename)
 {
 #ifdef WINDOWS

@@ -66,8 +66,12 @@
 		CB60605B15B071CE00D1CDD1 /* LazyEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605415B071CE00D1CDD1 /* LazyEvent.cpp */; };
 		CB60605C15B071CE00D1CDD1 /* LazyEventDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605615B071CE00D1CDD1 /* LazyEventDistributor.cpp */; };
 		CB60605D15B071CE00D1CDD1 /* LazyWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB60605915B071CE00D1CDD1 /* LazyWindow.cpp */; };
+		CB6B47E2164A841A000A68D3 /* libPocoFoundation.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6B47E1164A841A000A68D3 /* libPocoFoundation.dylib */; };
+		CB6B47E4164A8426000A68D3 /* libPocoUtil.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB6B47E3164A8426000A68D3 /* libPocoUtil.dylib */; };
 		CB72DEB015BF9D020009911C /* SDL2.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CBA2F8FA15BB60B100AB35ED /* SDL2.framework */; };
 		CB8C5EDF163FB80C00CE029D /* LaZyMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB8C5EDD163FB80C00CE029D /* LaZyMap.cpp */; };
+		CB91F9C016983DF30040F823 /* DejaVuSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB91F9BF16983DF30040F823 /* DejaVuSans.ttf */; };
+		CB91F9C216983E780040F823 /* Arial Unicode.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB91F9C116983E780040F823 /* Arial Unicode.ttf */; };
 		CBA2F8FB15BB60B100AB35ED /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA2F8FA15BB60B100AB35ED /* SDL2.framework */; };
 		CBCBCB3115BA467400D2F251 /* LazyEventResponder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBCBCB2F15BA467400D2F251 /* LazyEventResponder.cpp */; };
 		CBEA0FB5160FEE5F00E6818C /* LazyEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBEA0FB3160FEE5F00E6818C /* LazyEntity.cpp */; };
@@ -75,6 +79,16 @@
 		CBEA44DA161509700005A4B8 /* LazyLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBEA44D9161509700005A4B8 /* LazyLua.cpp */; };
 		CBF4437615A99F99006F9EE5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF4437515A99F99006F9EE5 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB8951AA1647BF39007DA114 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB8951A61647BF39007DA114 /* lazymapper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CB8951991647BF39007DA114;
+			remoteInfo = lazymapper;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		CB72DEAE15BF9CEF0009911C /* Copy Frameworks */ = {
@@ -203,9 +217,14 @@
 		CB60605715B071CE00D1CDD1 /* LazyEventDistributor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyEventDistributor.h; sourceTree = "<group>"; };
 		CB60605915B071CE00D1CDD1 /* LazyWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LazyWindow.cpp; sourceTree = "<group>"; };
 		CB60605A15B071CE00D1CDD1 /* LazyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyWindow.h; sourceTree = "<group>"; };
+		CB6B47E1164A841A000A68D3 /* libPocoFoundation.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libPocoFoundation.dylib; path = ../../../../../../../usr/local/lib/libPocoFoundation.dylib; sourceTree = "<group>"; };
+		CB6B47E3164A8426000A68D3 /* libPocoUtil.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libPocoUtil.dylib; path = ../../../../../../../usr/local/lib/libPocoUtil.dylib; sourceTree = "<group>"; };
 		CB7E34CA15E17E8700F4A99B /* lunar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lunar.h; sourceTree = "<group>"; };
+		CB8951A61647BF39007DA114 /* lazymapper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = lazymapper.xcodeproj; path = tools/lazymapper/lazymapper/lazymapper.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CB8C5EDD163FB80C00CE029D /* LaZyMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LaZyMap.cpp; path = lazy/map/LaZyMap.cpp; sourceTree = SOURCE_ROOT; };
 		CB8C5EDE163FB80C00CE029D /* LaZyMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaZyMap.h; path = lazy/map/LaZyMap.h; sourceTree = SOURCE_ROOT; };
+		CB91F9BF16983DF30040F823 /* DejaVuSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSans.ttf; sourceTree = "<group>"; };
+		CB91F9C116983E780040F823 /* Arial Unicode.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arial Unicode.ttf"; sourceTree = "<group>"; };
 		CBA2F8F815BA520C00AB35ED /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		CBA2F8FA15BB60B100AB35ED /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = lib/SDL2.framework; sourceTree = "<group>"; };
 		CBCBCB2F15BA467400D2F251 /* LazyEventResponder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LazyEventResponder.cpp; sourceTree = "<group>"; };
@@ -229,6 +248,8 @@
 				CB5BDC4E162688F700A71209 /* OpenGL.framework in Frameworks */,
 				CB5BDC4C1626880300A71209 /* libfreetype.6.dylib in Frameworks */,
 				CBA2F8FB15BB60B100AB35ED /* SDL2.framework in Frameworks */,
+				CB6B47E2164A841A000A68D3 /* libPocoFoundation.dylib in Frameworks */,
+				CB6B47E4164A8426000A68D3 /* libPocoUtil.dylib in Frameworks */,
 				CBF4437615A99F99006F9EE5 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,9 +492,18 @@
 			path = window;
 			sourceTree = "<group>";
 		};
+		CB8951A71647BF39007DA114 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB8951AB1647BF39007DA114 /* lazymapper */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CB8C5ED8163FB78300CE029D /* map */ = {
 			isa = PBXGroup;
 			children = (
+				CB8951A61647BF39007DA114 /* lazymapper.xcodeproj */,
 				CB8C5EDD163FB80C00CE029D /* LaZyMap.cpp */,
 				CB8C5EDE163FB80C00CE029D /* LaZyMap.h */,
 			);
@@ -493,7 +523,11 @@
 		CBF4436615A99F99006F9EE5 = {
 			isa = PBXGroup;
 			children = (
+				CB91F9C116983E780040F823 /* Arial Unicode.ttf */,
+				CB6B47E3164A8426000A68D3 /* libPocoUtil.dylib */,
+				CB6B47E1164A841A000A68D3 /* libPocoFoundation.dylib */,
 				CB5BDC531626AA4D00A71209 /* DroidSansMono.ttf */,
+				CB91F9BF16983DF30040F823 /* DejaVuSans.ttf */,
 				CB5BDC4D162688F700A71209 /* OpenGL.framework */,
 				CB5BDC4B1626880300A71209 /* libfreetype.6.dylib */,
 				CBA2F8FA15BB60B100AB35ED /* SDL2.framework */,
@@ -597,6 +631,12 @@
 			mainGroup = CBF4436615A99F99006F9EE5;
 			productRefGroup = CBF4437215A99F99006F9EE5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CB8951A71647BF39007DA114 /* Products */;
+					ProjectRef = CB8951A61647BF39007DA114 /* lazymapper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CBF4437015A99F99006F9EE5 /* LaZyGame */,
@@ -604,6 +644,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CB8951AB1647BF39007DA114 /* lazymapper */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = lazymapper;
+			remoteRef = CB8951AA1647BF39007DA114 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CBF4436F15A99F99006F9EE5 /* Resources */ = {
@@ -614,6 +664,8 @@
 				CB60603515B051D700D1CDD1 /* Credits.rtf in Resources */,
 				CB60603615B051D700D1CDD1 /* InfoPlist.strings in Resources */,
 				CB60603715B051D700D1CDD1 /* MainMenu.xib in Resources */,
+				CB91F9C016983DF30040F823 /* DejaVuSans.ttf in Resources */,
+				CB91F9C216983E780040F823 /* Arial Unicode.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,9 +815,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Debug;
 		};
@@ -786,8 +841,11 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Release;
 		};

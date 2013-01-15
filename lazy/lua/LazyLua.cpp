@@ -13,6 +13,12 @@ namespace Lazy
 {
     namespace Lua
     {
+		namespace System
+		{
+			int lua_pause(lua_State *L) {
+                return lua_yield(L,0);
+            };
+		}
         int registerTypes(lua_State* L)
         {
             static const luaL_Reg modules[] = {

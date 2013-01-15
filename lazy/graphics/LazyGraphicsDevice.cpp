@@ -11,6 +11,7 @@
 #include "SDL2/SDL.h"
 #include "SDL2/SDL_OpenGL.h"
 #include <iostream>
+#include <vector>
 
 
 #include "freetype-gl/freetype-gl.h"
@@ -22,6 +23,11 @@ typedef struct {
     float s, t;       // texture
     float r, g, b, a; // color
 } vertex_t;
+
+typedef struct {
+	texture_atlas_t* atlas;
+	texture_font_t* font;
+} font_t;
 
 
 #if defined(__APPLE__)
@@ -42,17 +48,124 @@ typedef struct {
 #endif
 
 
-SDL_GLContext mainGLContext = 0;
 
+
+std::string get_locale_string(const std::wstring & s)
+{
+	const wchar_t * cs = s.c_str();
+	const size_t wn = wcsrtombs(NULL, &cs, 0, NULL);
+	
+	if (wn == size_t(-1))
+	{
+		std::cout << "Error in wcsrtombs(): " << errno << std::endl;
+		return "";
+	}
+	
+	std::vector<char> buf(wn + 1);
+	const size_t wn_again = wcsrtombs(&buf[0], &cs, wn + 1, NULL);
+	
+	if (wn_again == size_t(-1))
+	{
+		std::cout << "Error in wcsrtombs(): " << errno << std::endl;
+		return "";
+	}
+	
+	assert(cs == NULL); // successful conversion
+	
+	return std::string(&buf[0], wn);
+}
+
+std::wstring get_wstring(const std::string & s)
+{
+	const char * cs = s.c_str();
+	const size_t wn = mbsrtowcs(NULL, &cs, 0, NULL);
+	
+	if (wn == size_t(-1))
+	{
+		std::cout << "Error in mbsrtowcs(): " << errno << std::endl;
+		return L"";
+	}
+	
+	std::vector<wchar_t> buf(wn + 1);
+	const size_t wn_again = mbsrtowcs(&buf[0], &cs, wn + 1, NULL);
+	
+	if (wn_again == size_t(-1))
+	{
+		std::cout << "Error in mbsrtowcs(): " << errno << std::endl;
+		return L"";
+	}
+	
+	assert(cs == NULL); // successful conversion
+	
+	return std::wstring(&buf[0], wn);
+}
+
+
+
+
+SDL_GLContext mainGLContext = 0;
+// --------------------------------------------------------------- add_text ---
+void add_text( vertex_buffer_t * buffer, texture_font_t * font, const wchar_t * text, vec4 * color, vec2 * pen );
+Lazy::GraphicsDevice::ResourceData Lazy::GraphicsDevice::NilResource = { Lazy::GraphicsDevice::ResourceType_Null, NULL};
 
 Lazy::ResourceHandle Lazy::GraphicsDevice::resourceIdCounter = 0;
-Lazy::ResourceHandle Lazy::GraphicsDevice::__createResource()
+Lazy::ResourceHandle Lazy::GraphicsDevice::__createResource(ResourceTypes type)
 {
+	ResourceData newResource;
+	newResource.type = type;
+	newResource.data = 0;
+	resources[resourceIdCounter] = newResource;
     return resourceIdCounter++;
 }
-void Lazy::GraphicsDevice::__releaseResource(Resource&)
+void Lazy::GraphicsDevice::__releaseResource(ResourceHandle resource)
 {
-    
+	ResourceMap::iterator resourceIterator = resources.find(resource);
+	if(resourceIterator != resources.end())
+	{
+		ResourceData resource = resourceIterator->second;
+		switch (resource.type)
+		{
+			case ResourceType_Font:
+				{
+					font_t* fontResource = (font_t*)resource.data;
+					texture_atlas_delete( fontResource->atlas );
+					texture_font_delete( fontResource->font );
+					resources.erase(resourceIterator);
+				}
+				break;
+			case ResourceType_Image:
+				{
+				}
+				break;
+			case ResourceType_VertexBuffer:
+				{
+				}
+				break;
+			default:
+				{
+				}
+				break;
+		}
+	}
+}
+void Lazy::GraphicsDevice::__setResourceData(ResourceHandle resource, void* data)
+{
+	ResourceMap::iterator resourceIterator = resources.find(resource);
+	if(resourceIterator != resources.end())
+	{
+		ResourceData& resourceData = resourceIterator->second;
+		resourceData.data = data;
+	}
+}
+Lazy::GraphicsDevice::ResourceData Lazy::GraphicsDevice:: __getResourceData(Lazy::ResourceHandle resource)
+{
+	ResourceMap::iterator resourceIterator = resources.find(resource);
+	if(resourceIterator != resources.end())
+	{
+		ResourceData& resourceData = resourceIterator->second;
+		return resourceData;
+	}
+	return NilResource;
 }
 
 Lazy::GraphicsDevice::GraphicsDevice(Window& window)
@@ -137,21 +250,37 @@ int Lazy::GraphicsDevice::loadFont()
 }
 Lazy::ResourceHandle Lazy::GraphicsDevice::loadFontFromFile(std::string filename)
 {
-    //texture_atlas_t *atlas = texture_atlas_new( 512, 512, 1 );
-    //texture_font_t *font = texture_font_new( atlas, Lazy::File::getResourcePathForFile("DroidSansMono.ttf").c_str(), 16 );
-    return 0;
-}
-int Lazy::GraphicsDevice::drawString(std::string string, int x, int y)
-{
-    vertex_buffer_t *buffer= vertex_buffer_new( "v3f:t2f:c4f" );
-    /*texture_font_load_glyphs( font, L" !\"#$%&'()*+,-./0123456789:;<=>?"
+	std::string resourceFilePath = Lazy::File::getResourcePathForFile(filename.c_str());
+
+	Lazy::ResourceHandle fontHandle = __createResource(ResourceType_Font);
+	
+	std::cout << "Creating font with handle [" << fontHandle << "] from file: " << resourceFilePath << std::endl;
+	
+	font_t* font = new font_t;
+	font->atlas = texture_atlas_new( 512, 512, 1 );
+	font->font = texture_font_new( font->atlas, resourceFilePath.c_str(), 16 );
+    texture_font_load_glyphs( font->font, L" !\"#$%&'()*+,-./0123456789:;<=>?"
                              L"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
                              L"`abcdefghijklmnopqrstuvwxyz{|}~");
+	__setResourceData(fontHandle, font);
+    return fontHandle;
+}
+int Lazy::GraphicsDevice::drawString(ResourceHandle fontHandle, std::wstring string, float x, float y)
+{
+	ResourceData fontResource = __getResourceData(fontHandle);
+	if( fontResource.type == Lazy::GraphicsDevice::ResourceType_Null )
+	{
+		//error
+		return 0;
+	}
+	font_t* font = (font_t*)fontResource.data;
+    vertex_buffer_t *buffer= vertex_buffer_new( "v3f:t2f:c4f" );
     
-    vec2 pen = {5,400};
-    vec4 black = {0,0,0,1};
-    wchar_t *text = L"A Quick Brown Fox Jumps Over The Lazy Dog 0123456789";
-    add_text( buffer, font, text, &black, &pen );*/
+    vec2 pen = {x,y};
+    vec4 black = {255,255,255,1};
+    //wchar_t *text = L"A Quick Brown Fox Jumps Over The Lazy Dog 0123456789";
+	
+    add_text( buffer, font->font, string.c_str(), &black, &pen );
     
     glEnable( GL_BLEND );
     glEnable( GL_TEXTURE_2D );
@@ -164,11 +293,11 @@ int Lazy::GraphicsDevice::drawString(std::string string, int x, int y)
 }
 
 void add_text( vertex_buffer_t * buffer, texture_font_t * font,
-              wchar_t * text, vec4 * color, vec2 * pen )
+              const wchar_t * text, vec4 * color, vec2 * pen )
 {
     size_t i;
     float r = color->red, g = color->green, b = color->blue, a = color->alpha;
-    for( i=0; i<wcslen(text); ++i )
+    for( i=0; i < wcslen(text); ++i )
     {
         texture_glyph_t *glyph = texture_font_get_glyph( font, text[i] );
         if( glyph != NULL )

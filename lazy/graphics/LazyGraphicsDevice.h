@@ -29,20 +29,24 @@ namespace Lazy
             ResourceType_Font,
             ResourceType_VertexBuffer
         };
-        struct Resource
+        struct ResourceData
         {
             ResourceTypes type;
             void* data;
         };
+		static ResourceData NilResource;
     private:
+		typedef std::map<ResourceHandle, ResourceData> ResourceMap;
         static ResourceHandle resourceIdCounter;
         void* window;
         void* renderer;
         int width;
         int height;
-        std::map<ResourceHandle, Resource> resources;
-        Lazy::ResourceHandle __createResource();
-        void __releaseResource(Resource&);
+        ResourceMap resources;
+        ResourceHandle __createResource(ResourceTypes type);
+        void __releaseResource(ResourceHandle);
+		void __setResourceData(ResourceHandle, void* data);
+		ResourceData __getResourceData(ResourceHandle);
     public:
         static GraphicsDevice* instance;
         
@@ -53,7 +57,7 @@ namespace Lazy
         //void ImageLoad(
         int loadFont();
         ResourceHandle loadFontFromFile(std::string filename);
-        int drawString(std::string string, int x, int y);
+        int drawString(ResourceHandle fontHandle, std::wstring string, float x, float y);
     };
 }
 

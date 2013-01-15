@@ -13,6 +13,7 @@
 #include "Crystal/TypeInfo.h"
 #include "system/file/LazyFile.h"
 #include <iostream>
+#include <clocale>
 
 #include "lua/LazyLua.h"
 #include "love/runtime.h"
@@ -60,6 +61,7 @@ int luax_openfile(const char* filename)
 //main program loop
 int main(int argc, char** argv)
 {
+	std::setlocale(LC_CTYPE, "en_US.utf8");
     lua_State *L = 0;
     
     bool keepRunning = true;
@@ -67,7 +69,8 @@ int main(int argc, char** argv)
     Lazy::Window window(640,480);
     Lazy::GraphicsDevice graphics(window);
     Lazy::Lua::Machine vm;
-    L = vm.newFiber();
+	Lazy::ResourceHandle font = graphics.loadFontFromFile("Arial Unicode.ttf");
+    L = vm.FiberNew();
     vm.LoadProgram(L, program);
 
     /*distro.subscribe(Crystal::GetTypeId<A>(),
@@ -90,10 +93,10 @@ int main(int argc, char** argv)
 
     while(keepRunning)
     {
-        vm.Run();
+        //vm.Run();
         keepRunning = window.HandleEvents();
-        graphics.Present();
-        
+
+		graphics.drawString(font, L"レナート Hello World ﻟﻴﻨﺎﺭﺕ", 32, 64);
         
         
         window.FlipBuffer();

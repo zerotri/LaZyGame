@@ -241,7 +241,7 @@ namespace love
 		if(lua_isnil(L, -1))
 			return luaL_error(L, "Can't register searcher: package.loaders table does not exist.");
 
-		int len = lua_rawlen(L, -1);
+		size_t len = lua_rawlen(L, -1);
 		lua_pushinteger(L, len+1);
 		lua_pushcfunction(L, f);
 		lua_settable(L, -3);

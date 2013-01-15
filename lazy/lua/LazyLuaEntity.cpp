@@ -18,7 +18,7 @@ namespace Lazy
     {
         namespace Entity
         {
-            static class Entity* instance = 0;
+            //static class Entity* instance = 0;
             int w_newEntity(lua_State * L)
             {
                 printf("Entered newEntity\n");

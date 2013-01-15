@@ -16,6 +16,8 @@ extern "C" {
 }
 #include <stdio.h>
 #include <vector>
+#include <algorithm>
+
 
 namespace Lazy
 {
@@ -23,9 +25,7 @@ namespace Lazy
     {
         namespace System
         {
-            int lua_pause(lua_State *L) {
-                return lua_yield(L,0);
-            };
+            int lua_pause(lua_State *L);
         }
         int registerTypes(lua_State* L);
         class Machine
@@ -33,7 +33,22 @@ namespace Lazy
         private:
             lua_State* mainFiber;
             std::vector<lua_State*> fibers;
+			std::vector<lua_State*> fibersEnding;
         public:
+            static bool RunFiber(lua_State* L)
+            {
+                int status = 0;
+                lua_resume(L, 0, 0);
+				if(status != LUA_YIELD)
+				{
+					if (status == LUA_ERRRUN && lua_isstring(L, -1)) {
+						printf("isstring: %s\n", lua_tostring(L, -1));
+						lua_pop(L, -1);
+					}
+					return true;
+				}
+				return false;
+            }
             Machine()
             {
                 mainFiber = luaL_newstate();
@@ -74,23 +89,9 @@ namespace Lazy
             }
             int Run()
             {
-                int status = 0;
-                std::vector<lua_State*>::iterator currentFiber = fibers.begin();
-                for (; currentFiber != fibers.end(); currentFiber++) {
-                    status = lua_resume(*currentFiber, 0, 0);
-                    if(status != LUA_YIELD)
-                    {
-                        if (status == LUA_ERRRUN && lua_isstring(*currentFiber, -1)) {
-                            printf("isstring: %s\n", lua_tostring(*currentFiber, -1));
-                            lua_pop(*currentFiber, -1);
-                        }
-                    }
-                }
-                return 0;
-            }
-            int RunFiber(lua_State* L)
-            {
-                lua_resume(L, 0, 0);
+				// Run through all fibers, removing those that have yielded
+				// or caused an error
+				std::remove_if(fibers.begin(), fibers.end(), RunFiber);
                 return 0;
             }
         };
