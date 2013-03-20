@@ -7,7 +7,7 @@
 
 #include <cstdarg>
 #include <string>
-#include <Crystal/Types.h>
+#include <Crystal/TypeDefines.h>
 
 #ifdef CRYSTAL_OUTPUT_VERBOSE_DEBUG_INFO
     #include <iostream>

@@ -5,7 +5,8 @@
 //  Created by Wynter Woods on 7/11/12.
 //  Copyright (c) 2012 Wynter Woods. All rights reserved.
 //
-
+#include <lazy/LazyConfig.h>
+#ifdef PLATFORM_SDL
 #include "LazyWindow.h"
 #include "SDL2/SDL.h"
 
@@ -52,3 +53,4 @@ int Lazy::Window::FlipBuffer()
     //SDL_UpdateWindowSurface((SDL_Window*)this->window);
     return 0;
 }
+#endif

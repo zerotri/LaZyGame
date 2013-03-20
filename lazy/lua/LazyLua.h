@@ -10,9 +10,9 @@
 #define LAZY_LUA_H
 
 extern "C" {
-#include "Lua/src/lua.h"
-#include "Lua/src/lauxlib.h"
-#include "Lua/src/lualib.h"
+#include <lua/src/lua.h>
+#include "lua/src/lauxlib.h"
+#include "lua/src/lualib.h"
 }
 #include <stdio.h>
 #include <vector>

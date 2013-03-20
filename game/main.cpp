@@ -7,17 +7,17 @@
 //
 
 #include "main.h"
-#include "system/window/LazyWindow.h"
-#include "graphics/LazyGraphicsDevice.h"
-#include "system/event/LazyEventDistributor.h"
-#include "Crystal/TypeInfo.h"
-#include "system/file/LazyFile.h"
+#include <lazy/graphics/LazyGraphicsDevice.h>
+#include <lazy/system/window/LazyWindow.h>
+#include <lazy/system/event/LazyEventDistributor.h>
+#include <lazy/system/file/LazyFile.h>
+#include <Crystal/TypeInfo.h>
 #include <iostream>
 #include <clocale>
 
-#include "lua/LazyLua.h"
-#include "love/runtime.h"
-#include "lunar.h"
+#include <lazy/lua/LazyLua.h>
+#include <love/runtime.h>
+#include <lunar.h>
 
 
 const char *program =
@@ -58,6 +58,7 @@ int luax_openfile(const char* filename)
     return 0;
 }
 
+#ifdef __SDL_MAIN__
 //main program loop
 int main(int argc, char** argv)
 {
@@ -66,7 +67,7 @@ int main(int argc, char** argv)
     
     bool keepRunning = true;
     Lazy::EventDistributor distro;
-    Lazy::Window window(640,480);
+    //Lazy::Window window(640,480);
     Lazy::GraphicsDevice graphics(window);
     Lazy::Lua::Machine vm;
 	Lazy::ResourceHandle font = graphics.loadFontFromFile("Arial Unicode.ttf");
@@ -105,3 +106,4 @@ int main(int argc, char** argv)
     lua_close(L);
     return 0;
 }
+#endif

@@ -4,7 +4,7 @@
 #include <Crystal/Object.h>
 #include <Crystal/TypeInfo.h>
 #include <Crystal/Event.h>
-#include <Crystal/Types.h>
+#include <Crystal/TypeDefines.h>
 #include <Crystal/Optional.h>
 
 #endif

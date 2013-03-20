@@ -21,23 +21,33 @@
 #include "runtime.h"
 
 // LOVE
-#include "love/Module.h"
-#include "love/Object.h"
-#include "love/Reference.h"
-#include "love/StringMap.h"
+#include <love/Module.h>
+#include <love/Object.h>
+#include <love/Reference.h>
+#include <love/StringMap.h>
 
 // STD
 #include <iostream>
 
 // SDL
-#include <SDL2/SDL_mutex.h>
-#include <SDL2/SDL_thread.h>
+#ifdef SDL
+	#include <SDL2/SDL_mutex.h>
+	#include <SDL2/SDL_thread.h>
+#else
+#include <mutex>
+#include <thread>
+#endif
 
 namespace love
 {
+#ifdef SDL
 	static SDL_mutex *gcmutex = 0;
-	void *_gcmutex = 0;
 	unsigned int _gcthread = 0;
+#else
+	static std::mutex *gcmutex = 0;
+	unsigned int _gcthread = 0;
+#endif
+	void *_gcmutex = 0;
 	/**
 	* Called when an object is collected. The object is released
 	* once in this function, possibly deleting it.
@@ -46,17 +56,28 @@ namespace love
 	{
 		if (!gcmutex)
 		{
+#ifdef SDL
 			gcmutex = SDL_CreateMutex();
+#else
+			gcmutex = new std::mutex();
+#endif
 			_gcmutex = (void*) gcmutex;
 		}
 		Proxy * p = (Proxy *)lua_touserdata(L, 1);
 		Object * t = (Object *)p->data;
 		if(p->own)
 		{
+#ifdef SDL
 			SDL_mutexP(gcmutex);
 			_gcthread = (unsigned int) SDL_ThreadID();
 			t->release();
 			SDL_mutexV(gcmutex);
+#else
+			gcmutex->lock();
+			_gcthread = 0;//(unsigned int) &std::this_thread.native_handle();
+			t->release();
+			gcmutex->unlock();
+#endif
 		}
 		return 0;
 	}

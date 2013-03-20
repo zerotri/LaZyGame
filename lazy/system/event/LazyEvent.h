@@ -6,7 +6,7 @@
 #define LAZY_EVENT_H
 
 #include <iostream>
-#include "Crystal/Object.h"
+#include <Crystal/Object.h>
 
 namespace Lazy
 {

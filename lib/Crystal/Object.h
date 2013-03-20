@@ -4,7 +4,7 @@
 //----------------------------------------------------------------------------
 #ifndef CRYSTAL_OBJECT_H
 #define CRYSTAL_OBJECT_H
-#include <Crystal/Types.h>
+#include <Crystal/TypeDefines.h>
 #include <Crystal/TypeInfo.h>
 namespace Crystal {
 	class IObject

@@ -9,7 +9,7 @@
 #ifndef LAZY_GRAPHICSDEVICE_H
 #define LAZY_GRAPHICSDEVICE_H
 
-#include "system/window/LazyWindow.h"
+#include <lazy/system/window/LazyWindow.h>
 #include <iostream>
 #include <map>
 
@@ -19,7 +19,7 @@ namespace Lazy
     typedef uint64_t ResourceHandle;
     
     
-    class GraphicsDevice
+    class IGraphicsDevice
     {
     public:
         enum ResourceTypes
@@ -35,7 +35,7 @@ namespace Lazy
             void* data;
         };
 		static ResourceData NilResource;
-    private:
+    protected:
 		typedef std::map<ResourceHandle, ResourceData> ResourceMap;
         static ResourceHandle resourceIdCounter;
         void* window;
@@ -48,16 +48,16 @@ namespace Lazy
 		void __setResourceData(ResourceHandle, void* data);
 		ResourceData __getResourceData(ResourceHandle);
     public:
-        static GraphicsDevice* instance;
+        static IGraphicsDevice* instance;
         
-        GraphicsDevice(Window& window);
-        ~GraphicsDevice();
-        int Clear();
-        int Present();
+        IGraphicsDevice(void* window);
+        virtual ~IGraphicsDevice();
+        virtual int Clear() = 0;
+        virtual int Present() = 0;
         //void ImageLoad(
-        int loadFont();
+        virtual int loadFont() = 0;
         ResourceHandle loadFontFromFile(std::string filename);
-        int drawString(ResourceHandle fontHandle, std::wstring string, float x, float y);
+        virtual int drawString(ResourceHandle fontHandle, std::wstring string, float x, float y);
     };
 }
 

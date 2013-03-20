@@ -5,8 +5,8 @@
 
 #ifndef CRYSTAL_MEMORY_H
 #define CRYSTAL_MEMORY_H
-#include <memory>
-#include <Crystal/Types.h>
+//#include <memory>
+#include <Crystal/TypeDefines.h>
 namespace Crystal {
 	//----------------------------------------------------------------------------
 	// Method: MemoryAllocate
